@@ -1,4 +1,6 @@
 //  Variables 
+const prendasStock = ["remera", "pantalon", "buzo"];
+const preciosStock = [15000, 30000, 45000];
 const carritoNombres = [];
 const carritoPrecios = [];
 let seleccionando = true;
@@ -24,10 +26,14 @@ function agregarAlCarrito(nombrePrenda, precioPrenda) {
     alert("Agregaste " + nombrePrenda + " al carrito. Precio: $" + precioPrenda);
 }
 
-// Función para sumar
-function calcularTotal(listaDeCompras) {
+    // Función para sumar
+function calcularTotal(listaDePrecios) {
     let total = 0;
-
+    for (let precio of listaDePrecios) {
+        total += precio;
+    }
+    return total;
+}
 // Ciclo for para recorrer el array
 function calcularTotal(listaDePrecios) {
     let total = 0;
@@ -37,7 +43,7 @@ function calcularTotal(listaDePrecios) {
     return total;
 }
     return total;
-}
+
 
 // Mensaje 
 alert("Bienvenido a la Tienda de Ropa");
@@ -61,12 +67,12 @@ while (seleccionando) {
     seleccionando = confirm("¿Querés seguir agregando productos?");
 }
 
-if (carrito.length > 0) {
-    const totalPagar = calcularTotal(carrito);
+if (carritoNombres.length > 0) {
+    const totalPagar = calcularTotal(carritoPrecios);
     
-    console.log("Detalle de la compra:", carrito);
+    console.log("Detalle de la compra:", carritoNombres);
     
-    alert("Compraste " + carrito.length + " prendas. El total a pagar es: $" + totalPagar);
+    alert("Compraste " + carritoNombres.length + " prendas. El total a pagar es: $" + totalPagar);
 } else {
     alert("Gracias por visitar la tienda. No realizaste ninguna compra.");
 }
