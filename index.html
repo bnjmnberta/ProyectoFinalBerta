@@ -3,10 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="index.js" defer></script>
-    <title>Document</title>
+    <title>Tienda de Ropa | Oficial</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </head>
 <body>
-    
+
+    <header>
+        <div class="logo-container">
+            <img src="img/logo.png" alt="Logo de la tienda" id="logo">
+            <h1>Tienda de Ropa</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#seccion-carrito"><i class="fas fa-shopping-cart"></i> Mi Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="catalogo">
+            <h2>Nuestros Productos</h2>
+            
+            <div id="contenedor-productos" class="grid-productos">
+                </div>
+        </section>
+
+        <section id="seccion-carrito" class="carrito-panel">
+            <h2>Tu Compra</h2>
+            <div class="carrito-contenido">
+                <ul id="lista-carrito"></ul>
+                
+                <div class="carrito-resumen">
+                    <p>Total a pagar: $<span id="total-carrito">0</span></p>
+                    <div class="botones-carrito">
+                        <button id="btn-vaciar" class="btn-secundario"><i class="fas fa-trash"></i> Vaciar</button>
+                        <button id="btn-comprar" class="btn-primario"><i class="fas fa-credit-card"></i> Pagar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-info">
+            <p>&copy; 2026 Tienda de Ropa. Todos los derechos reservados.</p>
+            <div class="redes-sociales">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>
