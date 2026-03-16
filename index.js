@@ -4,15 +4,15 @@ const carritoPrecios = [];
 let seleccionando = true;
 
 
+
 function consultarPrecio(prenda) {
-    // toLowerCase()
     switch (prenda.toLowerCase()) {
-        case "remera":
-            return 15000;
-        case "pantalon":
-            return 30000;
-        case "buzo":
-            return 45000;
+        case prendasStock[0]: 
+            return preciosStock[0]; 
+        case prendasStock[1]: 
+            return preciosStock[1]; 
+        case prendasStock[2]: 
+            return preciosStock[2]; 
         default:
             return 0; 
     }
