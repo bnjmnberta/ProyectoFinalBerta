@@ -1,5 +1,6 @@
 //  Variables 
-const carrito = [];
+const carritoNombres = [];
+const carritoPrecios = [];
 let seleccionando = true;
 
 
