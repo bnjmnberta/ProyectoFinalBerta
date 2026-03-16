@@ -18,6 +18,12 @@ function consultarPrecio(prenda) {
     }
 }
 
+function agregarAlCarrito(nombrePrenda, precioPrenda) {
+    carritoNombres.push(nombrePrenda);
+    carritoPrecios.push(precioPrenda);
+    alert("Agregaste " + nombrePrenda + " al carrito. Precio: $" + precioPrenda);
+}
+
 // Función para sumar
 function calcularTotal(listaDeCompras) {
     let total = 0;
