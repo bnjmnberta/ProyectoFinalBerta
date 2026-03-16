@@ -27,10 +27,15 @@ function agregarAlCarrito(nombrePrenda, precioPrenda) {
 // Función para sumar
 function calcularTotal(listaDeCompras) {
     let total = 0;
-    // Ciclo for para recorrer el array
-    for (let i = 0; i < listaDeCompras.length; i++) {
-        total += listaDeCompras[i].precio;
+
+// Ciclo for para recorrer el array
+function calcularTotal(listaDePrecios) {
+    let total = 0;
+    for (let precio of listaDePrecios) {
+        total += precio;
     }
+    return total;
+}
     return total;
 }
 
@@ -45,13 +50,10 @@ while (seleccionando) {
     if (prendaIngresada !== null) {
         let precio = consultarPrecio(prendaIngresada);
 
-        // 5. Condicional (if/else)
+       // 5. Condicional (if/else)
         if (precio > 0) {
-            alert("Agregaste " + prendaIngresada + " al carrito. Precio: $" + precio);
-            carrito.push({
-                nombre: prendaIngresada,
-                precio: precio
-            });
+            // ---> ACÁ USAMOS LA FUNCIÓN NUEVA <---
+            agregarAlCarrito(prendaIngresada, precio);
         } else {
             alert("Disculpá, no tenemos esa prenda en stock o escribiste mal el nombre.");
         }
