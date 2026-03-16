@@ -1,11 +1,9 @@
-//  Variables 
+// Variables 
 const prendasStock = ["remera", "pantalon", "buzo"];
 const preciosStock = [15000, 30000, 45000];
 const carritoNombres = [];
 const carritoPrecios = [];
 let seleccionando = true;
-
-
 
 function consultarPrecio(prenda) {
     switch (prenda.toLowerCase()) {
@@ -26,7 +24,7 @@ function agregarAlCarrito(nombrePrenda, precioPrenda) {
     alert("Agregaste " + nombrePrenda + " al carrito. Precio: $" + precioPrenda);
 }
 
-    // Función para sumar
+// Función para sumar
 function calcularTotal(listaDePrecios) {
     let total = 0;
     for (let precio of listaDePrecios) {
@@ -34,31 +32,17 @@ function calcularTotal(listaDePrecios) {
     }
     return total;
 }
-// Ciclo for para recorrer el array
-function calcularTotal(listaDePrecios) {
-    let total = 0;
-    for (let precio of listaDePrecios) {
-        total += precio;
-    }
-    return total;
-}
-    return total;
-
 
 // Mensaje 
 alert("Bienvenido a la Tienda de Ropa");
 
-
 while (seleccionando) {
-    
     let prendaIngresada = prompt("¿Qué desea comprar? (Remera / Pantalon / Buzo)");
 
     if (prendaIngresada !== null) {
         let precio = consultarPrecio(prendaIngresada);
 
-       // 5. Condicional (if/else)
         if (precio > 0) {
-            // ---> ACÁ USAMOS LA FUNCIÓN NUEVA <---
             agregarAlCarrito(prendaIngresada, precio);
         } else {
             alert("Disculpá, no tenemos esa prenda en stock o escribiste mal el nombre.");
